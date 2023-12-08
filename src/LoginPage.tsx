@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const LoginPage = () => {
-  const [loading, setLoading] = useState(false);
+
+const LoginPage = (): JSX.Element => {
+  const [loading, setLoading] = useState<boolean>(false);
+
+  // const handleSubmitTest = (value: string): string => {
+
+  // }
 
   const {
     register,
@@ -24,6 +29,7 @@ const LoginPage = () => {
       <form
         onSubmit={handleSubmit((data) => {
           setLoading(true);
+          console.log(data);
         })}
       >
         <input
